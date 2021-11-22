@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <br>
+    <br>
+    {% if message %}
+        <h1>{{message}}</h1>
+    {% endif %}
+    <form action = {% url 'authe:login' %} , method='POST'>
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class = 'btn btn-primary'>
+            Логин
+        </button>
+    </form>
+{% endblock%}

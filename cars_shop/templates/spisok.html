@@ -1,0 +1,4 @@
+ {% for i in reg %}
+     <a href="{% url 'detail' pk=i.id %}">{{i.name}}</a>
+{% endfor %} 
+
